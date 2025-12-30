@@ -70,27 +70,12 @@ document.addEventListener('visibilitychange',
 
 
 // <!-- typed js effect starts -->
-window.addEventListener("load", function () {
-  const el = document.querySelector(".typing-text");
-  if (!el || typeof Typed === "undefined") return;
-
-  // Force Typed.js to fully control the node
-  el.textContent = "";
-
-  new Typed(".typing-text", {
-    strings: [
-      "Computer Science & Technology",
-      "Information Systems & Software Engineering",
-      "Strategy & Leadership"
-    ],
+var typed = new Typed(".typing-text", {
+    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
-    backDelay: 1200,
-    smartBackspace: false,   // critical
-    showCursor: true,
-    cursorChar: "|"
-  });
+    backDelay: 500,
 });
 // <!-- typed js effect ends -->
 
@@ -153,7 +138,7 @@ function showProjects(projects) {
         origin: 'top',
         distance: '80px',
         duration: 1000,
-        reset: false
+        reset: true
     });
 
     /* SCROLL PROJECTS */
@@ -223,7 +208,7 @@ const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
     duration: 1000,
-    reset: false
+    reset: true
 });
 
 /* SCROLL HOME */
