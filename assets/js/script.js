@@ -73,9 +73,9 @@ document.addEventListener('visibilitychange',
 var typed = new Typed(".typing-text", {
     strings: ["Computer Science &amp; Technology", "Information Systems &amp; Software Engineering", "Strategy &amp; Leadership"],
     loop: true,
-    typeSpeed: 70,
-    backSpeed: 30,
-    backDelay: 600,
+    typeSpeed: 90,
+    backSpeed: 27,
+    backDelay: 550,
 });
 // <!-- typed js effect ends -->
 
