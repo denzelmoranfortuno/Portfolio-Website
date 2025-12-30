@@ -70,12 +70,27 @@ document.addEventListener('visibilitychange',
 
 
 // <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: ["Computer Science & Technology", "Information Systems & Software Engineering", "Strategy & Leadership"],
+window.addEventListener("load", function () {
+  const el = document.querySelector(".typing-text");
+  if (!el || typeof Typed === "undefined") return;
+
+  // Force Typed.js to fully control the node
+  el.textContent = "";
+
+  new Typed(".typing-text", {
+    strings: [
+      "Computer Science & Technology",
+      "Information Systems & Software Engineering",
+      "Strategy & Leadership"
+    ],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
-    backDelay: 500,
+    backDelay: 1200,
+    smartBackspace: false,   // critical
+    showCursor: true,
+    cursorChar: "|"
+  });
 });
 // <!-- typed js effect ends -->
 
