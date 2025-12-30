@@ -71,17 +71,11 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-  strings: [
-    "Computer Science & Technology",
-    "Information Systems and Software Engineering",
-    "Strategy and Leadership"
-  ],
-  loop: true,
-  typeSpeed: 50,
-  backSpeed: 30,
-  backDelay: 1000,
-  smartBackspace: false,
-  fadeOut: false
+    strings: ["Computer Science &amp; Technology", "Information Systems &amp; Software Engineering", "Strategy &amp; Leadership"],
+    loop: true,
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 750,
 });
 // <!-- typed js effect ends -->
 
