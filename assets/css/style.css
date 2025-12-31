@@ -461,6 +461,185 @@ header .navbar ul li a:hover {
   min-height: 90vh;
   background: #1C1F1D;
 }
+/* ===== TECHNOLOGY STACK – FULL WIDTH CAROUSEL ===== */
+
+.tech-section--full {
+  width: 90%;
+  margin: 2rem auto 0;
+  padding: 2.2rem;
+  border-radius: 14px;
+  background: rgba(0, 0, 22, 0.35);
+}
+
+.tech-main {
+  width: 100%;
+  position: relative;
+}
+
+/* Navigation buttons */
+.tech-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.tech-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #6BB000;
+  border: none;
+  color: #0b0f1a;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+}
+
+.tech-nav-btn:hover {
+  background: #508400;
+  transform: translateY(-1px);
+}
+
+.tech-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Horizontal rail */
+.tech-rail {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1.2rem;
+}
+
+.tech-rail::-webkit-scrollbar {
+  height: 0;
+}
+
+/* Cards row */
+.tech-cards {
+  display: flex;
+  gap: 1.8rem;
+  padding: 0.4rem 0.2rem 1.2rem;
+  scroll-snap-type: x mandatory;
+}
+
+/* Card */
+.tech-card {
+  flex: 0 0 320px;
+  height: 260px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #0b0f1a, #070a12);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover glow */
+.tech-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 40% 30%, rgba(107,176,0,0.25), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(107,176,0,0.22);
+}
+
+.tech-card:hover::before {
+  opacity: 1;
+}
+
+/* Card content */
+.tech-card-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tech-icon i,
+.tech-icon img {
+  font-size: 3.8rem;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+}
+
+.tech-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.tech-sub {
+  font-size: 1.35rem;
+  color: #cbd5e1;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-transform: none;
+}
+
+/* Bottom meta reveal */
+.tech-meta {
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 1.8rem;
+  transform: translateY(24px);
+  opacity: 0;
+  font-size: 1.25rem;
+  color: #9ca3af;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-meta {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Progress bar */
+.tech-progress {
+  margin-top: 1.2rem;
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.tech-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #6BB000;
+  transition: width 0.12s linear;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tech-card {
+    flex-basis: 280px;
+  }
+}
 .skills h2 {
   color: #fff;
 }
@@ -475,20 +654,6 @@ header .navbar ul li a:hover {
   width: 90%;
   margin: auto;
   margin-top: 2rem;
-}
-.skills .container .row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
-}
-.skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
