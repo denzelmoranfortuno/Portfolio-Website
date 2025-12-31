@@ -474,6 +474,7 @@ header .navbar ul li a:hover {
 .tech-main {
   width: 100%;
   position: relative;
+  background: #ffffff;
 }
 
 /* Navigation buttons */
