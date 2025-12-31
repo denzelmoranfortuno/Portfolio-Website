@@ -258,7 +258,7 @@ header .navbar ul li a:hover {
   border-radius: 4em;
   transition: 0.5s;
   color: #fff;
-  background: #2506ad;
+  background: #6BB000;
   box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
@@ -273,7 +273,7 @@ header .navbar ul li a:hover {
   transition: 0.3s;
 }
 .home .btn:hover {
-  background: #1a047e;
+  background: #508400;
 }
 .home .btn:hover i {
   transform: translateX(5px);
@@ -296,8 +296,8 @@ header .navbar ul li a:hover {
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
-  color: #00d9ff;
-  background-color: #09011b;
+  color: #ffffff;
+  background-color: #111827;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -310,23 +310,14 @@ header .navbar ul li a:hover {
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
-  color: #fff;
-  background-color: #0685da;
+  color: #9ca3af;
+  background-color: transparent;
 }
 .social-icons a.github:hover {
   background-color: #0e0e0e;
 }
-.social-icons a.twitter:hover {
-  background-color: #00aced;
-}
 .social-icons a.linkedin:hover {
   background-color: #007bb6;
-}
-.social-icons a.dev:hover {
-  background-color: #070707;
-}
-.social-icons a.instagram:hover {
-  background-color: #ee00da;
 }
 /* social icons end */
 
