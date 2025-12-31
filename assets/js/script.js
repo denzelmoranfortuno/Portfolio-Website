@@ -90,18 +90,28 @@ async function fetchData(type = "skills") {
 }
 
 function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
+    const skillsContainer = document.getElementById("skillsContainer");
+
+    skillsContainer.innerHTML = skills.map(s => {
+        const iconHTML = s.icon
+            ? `<img src="${s.icon}" alt="${s.name}">`
+            : `<i class="${s.iconClass || 'fas fa-code'}"></i>`;
+
+        return `
+          <article class="tech-card">
+            <div class="tech-card-inner">
+              <div>
+                <span class="tech-icon">
+                  ${iconHTML}
+                </span>
+                <h4 class="tech-name">${s.name}</h4>
+                <p class="tech-sub">Production-grade usage in real systems.</p>
               </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
+              <div class="tech-meta">${s.category || "Technology"}</div>
+            </div>
+          </article>
+        `;
+    }).join("");
 }
 
 function showProjects(projects) {
@@ -234,7 +244,7 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 /* SCROLL SKILLS */
 srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.tech-card', { interval: 120 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
@@ -249,3 +259,42 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+/* ===== TECHNOLOGY STACK CAROUSEL ===== */
+(function initTechCarousel() {
+  const rail = document.getElementById("techRail");
+  const prev = document.getElementById("techPrev");
+  const next = document.getElementById("techNext");
+  const fill = document.getElementById("techProgressFill");
+
+  if (!rail || !prev || !next || !fill) return;
+
+  const getStep = () => {
+    const card = rail.querySelector(".tech-card");
+    return card ? card.getBoundingClientRect().width * 1.15 : 320;
+  };
+
+  const update = () => {
+    const max = rail.scrollWidth - rail.clientWidth;
+    const x = rail.scrollLeft;
+
+    prev.disabled = x <= 2;
+    next.disabled = x >= max - 2;
+
+    const pct = max <= 0 ? 100 : (x / max) * 100;
+    fill.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+  };
+
+  prev.addEventListener("click", () =>
+    rail.scrollBy({ left: -getStep() * 2, behavior: "smooth" })
+  );
+
+  next.addEventListener("click", () =>
+    rail.scrollBy({ left: getStep() * 2, behavior: "smooth" })
+  );
+
+  rail.addEventListener("scroll", update);
+  window.addEventListener("resize", update);
+
+  update();
+})();
