@@ -464,10 +464,10 @@ header .navbar ul li a:hover {
 /* ===== TECHNOLOGY STACK – FULL WIDTH CAROUSEL ===== */
 
 .tech-section--full {
-  width: 90%;
-  margin: 2rem auto 0;
-  padding: 2.2rem;
-  border-radius: 14px;
+  width: 95%;
+  margin: 3.5rem auto 0;
+  padding: 3.5rem 3,2rem;
+  border-radius: 18px;
   background: #ffffff;
 }
 
@@ -513,10 +513,10 @@ header .navbar ul li a:hover {
 .tech-rail {
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 1.2rem;
-
-  background: #ffffff; 
-  border-radius: 12px;   
+  
+  padding: 2.2rem 1.2rem
+  background: #ffffff;
+  border-radius: 16px; 
 }
 
 .tech-rail::-webkit-scrollbar {
@@ -533,13 +533,13 @@ header .navbar ul li a:hover {
 
 /* Card */
 .tech-card {
-  flex: 0 0 320px;
-  height: 260px;
-  border-radius: 14px;
+  flex: 0 0 360px;
+  height: 300px;
+  border-radius: 16px;
   background: linear-gradient(180deg, #0b0f1a, #070a12);
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    0 14px 36px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -588,14 +588,14 @@ header .navbar ul li a:hover {
 }
 
 .tech-name {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 800;
   color: #ffffff;
   margin: 1.2rem 0 0.5rem;
 }
 
 .tech-sub {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   color: #cbd5e1;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
