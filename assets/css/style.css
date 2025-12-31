@@ -186,6 +186,14 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
+
+  background: radial-gradient(
+    circle at 70% 45%,   /* aligns glow to portrait */
+    #9a9a9a 0%,
+    #6e6e6e 35%,
+    #4b4b4b 65%,
+    #3f3f3f 100%
+  );
 }
 .home #particles-js {
   position: absolute;
@@ -197,29 +205,28 @@ header .navbar ul li a:hover {
 .home::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
+  background: inherit; /* inherits the radial gradient */
+  z-index: 0;
 }
 .home .content {
-  flex: 1 1 40rem;
+    flex: 1 1 40rem;
   padding-top: 1rem;
+  position: relative;
   z-index: 1;
 }
+
 .home .image {
   flex: 1 1 40rem;
+  position: relative;
   z-index: 1;
 }
 .home .image img {
   width: 70%;
   margin-left: 6rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  box-shadow: none;
   cursor: pointer;
-}
-.home .image img:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .home .content h2 {
   font-size: 5rem;
