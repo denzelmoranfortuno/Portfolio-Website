@@ -34,11 +34,11 @@ html::-webkit-scrollbar {
   width: 0.8rem;
 }
 html::-webkit-scrollbar-track {
-  background: rgb(235, 202, 245);
+  background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: #22c55e;
-
+  background-color: #00000059;
+  border-radius: 8px
 }
 /* pre loader start */
 .loader-container {
