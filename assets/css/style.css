@@ -513,6 +513,9 @@ header .navbar ul li a:hover {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 1.2rem;
+
+  background: #ffffff; 
+  border-radius: 12px;   
 }
 
 .tech-rail::-webkit-scrollbar {
