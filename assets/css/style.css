@@ -37,9 +37,11 @@ html::-webkit-scrollbar-track {
   background: rgb(235, 202, 245);
 }
 html::-webkit-scrollbar-thumb {
-  background: #420177;
+  background: #22c55e;
 }
-
+html::-webkit-scrollbar-thumb:hover {
+  background: #14532d;
+}
 /* pre loader start */
 .loader-container {
   position: fixed;
