@@ -221,16 +221,9 @@ header .navbar ul li a:hover {
   position: relative;
   z-index: 1;
 }
-.home .image .image-wrap {
-  width: min(44rem, 36vw);   /* 🔧 MAIN SIZE CONTROL */
-  aspect-ratio: 3 / 4;       /* portrait ratio */
-  margin-left: 6rem;
-  position: relative;
-}
 .home .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 70%;
+  margin-left: 6rem;
   border-radius: 0;
   box-shadow: none;
   cursor: pointer;
