@@ -117,8 +117,8 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #011aff;
-  border-bottom: 0.2rem solid #011aff;
+  color: #6BB000;
+  border-bottom: 0.2rem solid #6BB000;
   padding: 0.5rem 0;
 }
 /* navbar ends */
@@ -165,9 +165,9 @@ header .navbar ul li a:hover {
   header .navbar ul li a.active,
   header .navbar ul li a:hover {
     padding: 1rem;
-    color: #fff;
+    color: #6BB000;
     border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #011aff;
+    border-bottom: 0.5rem solid #6BB000;
   }
   .fa-times {
     transform: rotate(180deg);
