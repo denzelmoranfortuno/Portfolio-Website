@@ -35,6 +35,11 @@
     "category": "marketing"
   },
   {
+    "name": "Python",
+    "icon": "https://img.icons8.com/color/48/000000/python--v1.png",
+    "category": "software"
+  },
+  {
     "name": "SQL",
     "icon": "https://img.icons8.com/fluency/48/000000/sql.png",
     "category": "software"
@@ -52,11 +57,6 @@
   {
     "name": "JavaScript",
     "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png",
-    "category": "software"
-  },
-  {
-    "name": "Python",
-    "icon": "https://img.icons8.com/color/48/000000/python--v1.png",
     "category": "software"
   },
   {
