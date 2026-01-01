@@ -469,7 +469,26 @@ header .navbar ul li a:hover {
   
   padding: 0;
   border-radius: 0;
-  background: #transparent;
+  background: transparent;
+  position: relative;
+}
+.skills-label {
+  position: absolute;
+  top: -1.4rem;
+  left: 1.6rem;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #6BB000;
+  background: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  z-index: 5;
 }
 
 .tech-main {
@@ -515,7 +534,7 @@ header .navbar ul li a:hover {
   overflow-x: auto;
   scroll-behavior: smooth;
   
-  padding: 2.2rem 1.2rem
+  padding: 2.2rem 1.2rem;
   background: #ffffff;
   border-radius: 16px; 
 }
