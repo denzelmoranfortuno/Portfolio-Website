@@ -644,11 +644,28 @@ header .navbar ul li a:hover {
 
 /* Progress bar */
 .tech-progress {
-  margin-top: 1.2rem;
-  height: 4px;
-  background: rgba(255,255,255,0.15);
+  margin-top: 1.4rem;
+  height: 6px;                    /* visible by default */
+  background: rgba(0,0,0,0.08);   /* visible on white */
   border-radius: 999px;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.tech-progress:hover {
+  height: 8px;
+}
+
+.tech-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    #6BB000,
+    #9CE600
+  );
+  transition: width 0.12s linear, background 0.2s ease;
 }
 
 .tech-progress-fill {
