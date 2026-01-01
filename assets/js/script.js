@@ -284,6 +284,19 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
     const pct = max <= 0 ? 100 : (x / max) * 100;
     fill.style.width = `${Math.min(100, Math.max(0, pct))}%`;
   };
+  const progress = document.querySelector(".tech-progress");
+
+progress.addEventListener("click", (e) => {
+  const rect = progress.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const pct = clickX / rect.width;
+
+  const max = rail.scrollWidth - rail.clientWidth;
+  rail.scrollTo({
+    left: max * pct,
+    behavior: "smooth"
+  });
+});
 
   prev.addEventListener("click", () =>
     rail.scrollBy({ left: -getStep() * 2, behavior: "smooth" })
