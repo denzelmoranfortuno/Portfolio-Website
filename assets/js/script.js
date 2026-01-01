@@ -90,28 +90,30 @@ async function fetchData(type = "skills") {
 }
 
 function showSkills(skills) {
-    const skillsContainer = document.getElementById("skillsContainer");
+  const container1 = document.getElementById("skillsContainer");
+  const container2 = document.getElementById("skillsContainer2");
 
-    skillsContainer.innerHTML = skills.map(s => {
-        const iconHTML = s.icon
-            ? `<img src="${s.icon}" alt="${s.name}">`
-            : `<i class="${s.iconClass || 'fas fa-code'}"></i>`;
+  const html = skills.map(s => {
+    const iconHTML = s.icon
+      ? `<img src="${s.icon}" alt="${s.name}">`
+      : `<i class="${s.iconClass || 'fas fa-code'}"></i>`;
 
-        return `
-          <article class="tech-card">
-            <div class="tech-card-inner">
-              <div>
-                <span class="tech-icon">
-                  ${iconHTML}
-                </span>
-                <h4 class="tech-name">${s.name}</h4>
-                <p class="tech-sub">Production-grade usage in real systems.</p>
-              </div>
-              <div class="tech-meta">${s.category || "Technology"}</div>
-            </div>
-          </article>
-        `;
-    }).join("");
+    return `
+      <article class="tech-card">
+        <div class="tech-card-inner">
+          <div>
+            <span class="tech-icon">${iconHTML}</span>
+            <h4 class="tech-name">${s.name}</h4>
+            <p class="tech-sub">Production-grade usage in real systems.</p>
+          </div>
+          <div class="tech-meta">${s.category || "Technology"}</div>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  if (container1) container1.innerHTML = html;
+  if (container2) container2.innerHTML = html;
 }
 
 function showProjects(projects) {
