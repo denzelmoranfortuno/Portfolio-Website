@@ -299,10 +299,6 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
     const maxScroll = rail.scrollWidth - rail.clientWidth;
     rail.scrollLeft = maxScroll * ratio;
   };
-    
-progress.addEventListener("click", (e) => {
-  seekToPosition(e.clientX);
-});
 
   progress.addEventListener("mousedown", (e) => {
     isDragging = true;
