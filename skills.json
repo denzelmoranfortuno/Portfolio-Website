@@ -70,6 +70,11 @@
     "category": "marketing"
   },
   {
+    "name": "SEMRUSH",
+    "icon": "https://prowly-prod.s3.eu-west-1.amazonaws.com/uploads/60169/assets/601030/large-f29a778ad5f89845eb2b5b358f9835a6.png",
+    "category": "marketing"
+  },
+  {
     "name": "Python",
     "icon": "https://img.icons8.com/color/48/000000/python--v1.png",
     "category": "software"
