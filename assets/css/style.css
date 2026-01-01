@@ -458,8 +458,12 @@ header .navbar ul li a:hover {
 
 /* skills section starts */
 .skills {
-  min-height: 90vh;
+  min-height: 100vh;
   background: #1C1F1D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 /* ===== TECHNOLOGY STACK – FULL WIDTH CAROUSEL ===== */
 
