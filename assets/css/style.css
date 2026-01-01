@@ -659,7 +659,7 @@ header .navbar ul li a:hover {
 
 .tech-progress-fill {
   height: 100%;
-  width: 100%;                 /* fixed width */
+  width: 100%; /* fixed width */
   background: linear-gradient(
     90deg,
     #6BB000 0%,
@@ -667,10 +667,10 @@ header .navbar ul li a:hover {
   );
   border-radius: 999px;
 
-  transform: scaleX(0.35);     /* initial visible state */
+  transform: scaleX(0);              /* start empty */
   transform-origin: left center;
 
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s linear; /* NVIDIA-style bidirectional scrub */
   will-change: transform;
 }
 
