@@ -277,16 +277,23 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
     return card ? card.getBoundingClientRect().width * 1.15 : 320;
   };
 
-  const update = () => {
-    const max = rail.scrollWidth - rail.clientWidth;
-    const x = rail.scrollLeft;
+let lastPct = 0;
 
-    prev.disabled = x <= 2;
-    next.disabled = x >= max - 2;
+const update = () => {
+  const max = rail.scrollWidth - rail.clientWidth;
+  const x = rail.scrollLeft;
 
-    const pct = max <= 0 ? 100 : (x / max) * 100;
-    fill.style.transform = `scaleX(${Math.min(1, Math.max(0, pct / 100))})`;
-  };
+  prev.disabled = x <= 2;
+  next.disabled = x >= max - 2;
+
+  const pct = max <= 0 ? 1 : x / max;
+
+  // True bidirectional sweep (left → right AND right → left)
+  fill.style.transform = `scaleX(${pct})`;
+
+  lastPct = pct;
+};
+
   let isDragging = false;
 
   const seekToPosition = (clientX) => {
