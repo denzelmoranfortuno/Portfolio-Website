@@ -466,9 +466,10 @@ header .navbar ul li a:hover {
 .tech-section--full {
   width: 95%;
   margin: 3.5rem auto 0;
-  padding: 3.5rem 3,2rem;
-  border-radius: 18px;
-  background: #ffffff;
+  
+  padding: 0;
+  border-radius: 0;
+  background: #transparent;
 }
 
 .tech-main {
