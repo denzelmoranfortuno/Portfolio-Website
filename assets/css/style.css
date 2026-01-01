@@ -668,6 +668,10 @@ header .navbar ul li a:hover {
   border-radius: 999px;
   transition: width 0.6s ease;
 }
+/* Ensure visibility even when carousel is fully left */
+.tech-progress:hover .tech-progress-fill {
+  width: 35%;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
