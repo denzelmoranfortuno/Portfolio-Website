@@ -1422,3 +1422,8 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* ===== Technology Stack duplicate spacing ===== */
+.tech-section-duplicate {
+  margin-top: 4rem;
+}
