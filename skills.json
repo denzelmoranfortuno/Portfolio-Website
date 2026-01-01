@@ -5,6 +5,26 @@
     "category": "ai"
   },
   {
+    "name": "Grok",
+    "icon": "https://img.icons8.com/?size=100&id=undefined&format=png&color=FFFFFF",
+    "category": "ai"
+  },
+  {
+    "name": "Claude",
+    "icon": "https://img.icons8.com/?size=100&id=zQjzFjPpT2Ek&format=png&color=000000",
+    "category": "ai"
+  },
+  {
+    "name": "Google Gemini",
+    "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/1.75.0/files/dark/gemini-color.png",
+    "category": "ai"
+  },
+  {
+    "name": "Microsoft Copilot",
+    "icon": "https://img.icons8.com/?size=100&id=PxQoyT1s0uFh&format=png&color=000000",
+    "category": "ai"
+  },
+  {
     "name": "Azure DevOps",
     "icon": "https://img.icons8.com/?size=100&id=lWL5zqQfa1pO&format=png&color=000000",
     "category": "product"
