@@ -266,8 +266,11 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
   const prev = document.getElementById("techPrev");
   const next = document.getElementById("techNext");
   const fill = document.getElementById("techProgressFill");
+  const progress = document.querySelector(".tech-progress");
 
-  if (!rail || !prev || !next || !fill) return;
+
+  if (!rail || !prev || !next || !fill || !progress) return;
+
 
   const getStep = () => {
     const card = rail.querySelector(".tech-card");
@@ -284,6 +287,34 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
     const pct = max <= 0 ? 100 : (x / max) * 100;
     fill.style.width = `${Math.min(100, Math.max(0, pct))}%`;
   };
+  let isDragging = false;
+
+  const seekToPosition = (clientX) => {
+    const rect = progress.getBoundingClientRect();
+    const ratio = Math.min(
+      1,
+      Math.max(0, (clientX - rect.left) / rect.width)
+    );
+
+    const maxScroll = rail.scrollWidth - rail.clientWidth;
+    rail.scrollLeft = maxScroll * ratio;
+  };
+
+  progress.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    seekToPosition(e.clientX);
+    document.body.style.userSelect = "none";
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    seekToPosition(e.clientX);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    document.body.style.userSelect = "";
+  });
 
   prev.addEventListener("click", () =>
     rail.scrollBy({ left: -getStep() * 2, behavior: "smooth" })
