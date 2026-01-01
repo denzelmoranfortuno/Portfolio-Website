@@ -80,6 +80,21 @@
     "category": "marketing"
   },
   {
+    "name": "Klaviyo",
+    "icon": "https://cdn.sanity.io/images/6ct6b26e/marketing-prod/360ba69bc84136c38ded3a7370109874ff5937f3-550x226.png",
+    "category": "marketing"
+  },
+  {
+    "name": "Eloqua",
+    "icon": "https://images.seeklogo.com/logo-png/37/1/oracle-eloqua-logo-png_seeklogo-376465.png",
+    "category": "marketing"
+  },
+  {
+    "name": "MailChimp",
+    "icon": "https://img.icons8.com/?size=100&id=undefined&format=png&color=000000",
+    "category": "marketing"
+  },
+  {
     "name": "Python",
     "icon": "https://img.icons8.com/color/48/000000/python--v1.png",
     "category": "software"
