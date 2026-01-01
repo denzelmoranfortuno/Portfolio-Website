@@ -90,39 +90,35 @@ async function fetchData(type = "skills") {
 }
 
 function showSkills(skills) {
-  const softwareContainer = document.getElementById("skillsContainer");
-  const marketingContainer = document.getElementById("skillsContainer2");
+  const sections = {
+    software: "skillsContainer",
+    marketing: "skillsContainer2",
+    ai: "skillsContainer3",
+    product: "skillsContainer4",
+    analytics: "skillsContainer5"
+  };
 
-  const render = (items) =>
-    items.map(s => {
-      const iconHTML = s.icon
-        ? `<img src="${s.icon}" alt="${s.name}">`
-        : `<i class="${s.iconClass || 'fas fa-code'}"></i>`;
+  Object.entries(sections).forEach(([category, containerId]) => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-      return `
-        <article class="tech-card">
-          <div class="tech-card-inner">
-            <div>
-              <span class="tech-icon">${iconHTML}</span>
-              <h4 class="tech-name">${s.name}</h4>
-              <p class="tech-sub">Production-grade usage in real systems.</p>
-            </div>
-            <div class="tech-meta">${s.category}</div>
+    const items = skills.filter(s => s.category === category);
+
+    container.innerHTML = items.map(s => `
+      <article class="tech-card">
+        <div class="tech-card-inner">
+          <div>
+            <span class="tech-icon">
+              <img src="${s.icon}" alt="${s.name}">
+            </span>
+            <h4 class="tech-name">${s.name}</h4>
+            <p class="tech-sub">Production-grade usage in real systems.</p>
           </div>
-        </article>
-      `;
-    }).join("");
-
-  const softwareSkills = skills.filter(s => s.category === "software");
-  const marketingSkills = skills.filter(s => s.category === "marketing");
-
-  if (softwareContainer) {
-    softwareContainer.innerHTML = render(softwareSkills);
-  }
-
-  if (marketingContainer) {
-    marketingContainer.innerHTML = render(marketingSkills);
-  }
+          <div class="tech-meta">${category}</div>
+        </div>
+      </article>
+    `).join("");
+  });
 }
 
 function showProjects(projects) {
@@ -351,3 +347,26 @@ initTechCarousel({
   progressId: "techProgressFill2"
 });
 
+// Third carousel — AI & Automation
+initTechCarousel({
+  railId: "techRail3",
+  prevId: "techPrev3",
+  nextId: "techNext3",
+  progressId: "techProgressFill3"
+});
+
+// Fourth carousel — Product Management
+initTechCarousel({
+  railId: "techRail4",
+  prevId: "techPrev4",
+  nextId: "techNext4",
+  progressId: "techProgressFill4"
+});
+
+// Fifth carousel — Business Intelligence & Data Analytics
+initTechCarousel({
+  railId: "techRail5",
+  prevId: "techPrev5",
+  nextId: "techNext5",
+  progressId: "techProgressFill5"
+});
