@@ -1,5 +1,10 @@
 [
   {
+    "name": "Google Ads",
+    "icon": "https://img.icons8.com/?size=100&id=ui4CTPMMDCFh&format=png&color=000000",
+    "category": "marketing"
+  },
+  {
     "name": "Meta",
     "icon": "https://img.icons8.com/fluency/48/000000/meta.png",
     "category": "marketing"
