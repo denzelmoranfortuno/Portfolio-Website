@@ -465,10 +465,6 @@ header .navbar ul li a:hover {
   justify-content: center;
   padding: 0;
 }
-.skills > .heading,
-.skills > .tech-section--full {
-  width: 100%;
-}
 /* ===== TECHNOLOGY STACK – FULL WIDTH CAROUSEL ===== */
 
 .tech-section--full {
@@ -476,13 +472,13 @@ header .navbar ul li a:hover {
   margin: 3.5rem auto 0;
   padding: 3.5rem 3,2rem;
   border-radius: 18px;
-  background: #1C1F1D;
+  background: #ffffff;
 }
 
 .tech-main {
   width: 100%;
   position: relative;
-  background: #1C1F1D;
+  background: #ffffff;
 }
 
 /* Navigation buttons */
@@ -523,7 +519,7 @@ header .navbar ul li a:hover {
   scroll-behavior: smooth;
   
   padding: 2.2rem 1.2rem
-  background: #1C1F1D;
+  background: #ffffff;
   border-radius: 16px; 
 }
 
