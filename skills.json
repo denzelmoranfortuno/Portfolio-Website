@@ -1,5 +1,20 @@
 [
   {
+    "name": "ChatGPT",
+    "icon": "https://img.icons8.com/?size=100&id=L5HOemp3WJOE&format=png&color=000000",
+    "category": "ai"
+  },
+  {
+    "name": "Azure DevOps",
+    "icon": "https://img.icons8.com/?size=100&id=lWL5zqQfa1pO&format=png&color=000000",
+    "category": "product"
+  },
+  {
+    "name": "Google Looker Studio",
+    "icon": "https://img.icons8.com/?size=100&id=SruJhzn0nnLl&format=png&color=000000",
+    "category": "Analytics"
+  },
+  {
     "name": "Google Ads",
     "icon": "https://img.icons8.com/?size=100&id=ui4CTPMMDCFh&format=png&color=000000",
     "category": "marketing"
