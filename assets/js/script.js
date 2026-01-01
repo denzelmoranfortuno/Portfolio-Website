@@ -285,7 +285,7 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
     next.disabled = x >= max - 2;
 
     const pct = max <= 0 ? 100 : (x / max) * 100;
-    fill.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+    fill.style.transform = `scaleX(${Math.min(1, Math.max(0, pct / 100))})`;
   };
   let isDragging = false;
 
