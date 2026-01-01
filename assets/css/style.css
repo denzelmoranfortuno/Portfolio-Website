@@ -652,13 +652,9 @@ header .navbar ul li a:hover {
   color: rgb(255, 230, 0);
 }
 .skills .container {
-  background: rgba(0, 0, 22, 0.4);
-  color: #fff;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 90%;
-  margin: auto;
-  margin-top: 2rem;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
