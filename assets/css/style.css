@@ -464,8 +464,8 @@ header .navbar ul li a:hover {
 /* ===== TECHNOLOGY STACK – FULL WIDTH CAROUSEL ===== */
 
 .tech-section--full {
-  width: 95%;
-  margin: 3.5rem auto 0;
+  width: 100%;
+  margin: 2rem auto 0;
   
   padding: 0;
   border-radius: 0;
@@ -534,7 +534,7 @@ header .navbar ul li a:hover {
   overflow-x: auto;
   scroll-behavior: smooth;
   
-  padding: 2.2rem 1.2rem;
+  padding: 1.2rem 1.2rem;
   background: #ffffff;
   border-radius: 16px; 
 }
@@ -553,8 +553,8 @@ header .navbar ul li a:hover {
 
 /* Card */
 .tech-card {
-  flex: 0 0 360px;
-  height: 300px;
+  flex: 0 0 320px;
+  height: 260px;
   border-radius: 16px;
   background: linear-gradient(180deg, #0b0f1a, #070a12);
   box-shadow:
@@ -608,14 +608,14 @@ header .navbar ul li a:hover {
 }
 
 .tech-name {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #ffffff;
   margin: 1.2rem 0 0.5rem;
 }
 
 .tech-sub {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: #cbd5e1;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
