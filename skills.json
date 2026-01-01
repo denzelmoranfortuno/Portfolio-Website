@@ -10,6 +10,31 @@
     "category": "marketing"
   },
   {
+    "name": "Microsoft Ads",
+    "icon": "https://img.icons8.com/fluency/48/000000/microsoft.png",
+    "category": "marketing"
+  },
+  {
+    "name": "Amazon Ads",
+    "icon": "https://img.icons8.com/?size=100&id=21295&format=png&color=000000",
+    "category": "marketing"
+  },
+  {
+    "name": "TikTok Ads",
+    "icon": "https://img.icons8.com/fluency/48/000000/tiktok.png",
+    "category": "marketing"
+  },
+  {
+    "name": "LinkedIn Ads",
+    "icon": "https://img.icons8.com/fluency/48/000000/linkedin.png",
+    "category": "marketing"
+  },
+  {
+    "name": "X Ads",
+    "icon": "https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000",
+    "category": "marketing"
+  },
+  {
     "name": "SQL",
     "icon": "https://img.icons8.com/fluency/48/000000/sql.png",
     "category": "software"
