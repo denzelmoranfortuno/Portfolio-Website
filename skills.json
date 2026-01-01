@@ -1,34 +1,47 @@
 [
     {
+        "name": "Meta",
+        "icon": "https://img.icons8.com/fluency/48/000000/meta.png"
+        "category": "marketing"
+    }, 
+    {
         "name": "SQL",
         "icon": "https://img.icons8.com/fluency/48/000000/sql.png"
+        "category": "software"
     },    
     {
         "name": "HTML5",
         "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+        "category": "software"
     },
     {
         "name": "CSS3",
         "icon": "https://img.icons8.com/color/48/000000/css3.png"
+        "category": "software"
     },
     {
         "name": "JavaScript",
         "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+        "category": "software"
     },
     {
         "name": "Python",
         "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+        "category": "software"
     },
     {
         "name": "jQuery",
         "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
+        "category": "software"
     },
     {
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+        "category": "software"
     },
     {
         "name": "Jira",
         "icon": "https://img.icons8.com/color/48/000000/jira.png"
+        "category": "software"
     }
 ]
