@@ -645,12 +645,14 @@ header .navbar ul li a:hover {
 /* Progress bar */
 .tech-progress {
   margin-top: 1.4rem;
-  height: 6px;                    /* visible by default */
-  background: rgba(0,0,0,0.08);   /* visible on white */
+  height: 4px;
+  background: #d1d5db;          /* visible light track */
   border-radius: 999px;
   overflow: hidden;
-  cursor: pointer;
+
+  cursor: ew-resize;            /* drag affordance */
   position: relative;
+  user-select: none;
 }
 
 .tech-progress:hover {
@@ -666,13 +668,6 @@ header .navbar ul li a:hover {
     #9CE600
   );
   transition: width 0.12s linear, background 0.2s ease;
-}
-
-.tech-progress-fill {
-  height: 100%;
-  width: 0%;
-  background: #6BB000;
-  transition: width 0.12s linear;
 }
 
 /* Mobile */
