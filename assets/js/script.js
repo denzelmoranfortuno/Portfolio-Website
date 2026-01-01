@@ -90,30 +90,39 @@ async function fetchData(type = "skills") {
 }
 
 function showSkills(skills) {
-  const container1 = document.getElementById("skillsContainer");
-  const container2 = document.getElementById("skillsContainer2");
+  const softwareContainer = document.getElementById("skillsContainer");
+  const marketingContainer = document.getElementById("skillsContainer2");
 
-  const html = skills.map(s => {
-    const iconHTML = s.icon
-      ? `<img src="${s.icon}" alt="${s.name}">`
-      : `<i class="${s.iconClass || 'fas fa-code'}"></i>`;
+  const render = (items) =>
+    items.map(s => {
+      const iconHTML = s.icon
+        ? `<img src="${s.icon}" alt="${s.name}">`
+        : `<i class="${s.iconClass || 'fas fa-code'}"></i>`;
 
-    return `
-      <article class="tech-card">
-        <div class="tech-card-inner">
-          <div>
-            <span class="tech-icon">${iconHTML}</span>
-            <h4 class="tech-name">${s.name}</h4>
-            <p class="tech-sub">Production-grade usage in real systems.</p>
+      return `
+        <article class="tech-card">
+          <div class="tech-card-inner">
+            <div>
+              <span class="tech-icon">${iconHTML}</span>
+              <h4 class="tech-name">${s.name}</h4>
+              <p class="tech-sub">Production-grade usage in real systems.</p>
+            </div>
+            <div class="tech-meta">${s.category}</div>
           </div>
-          <div class="tech-meta">${s.category || "Technology"}</div>
-        </div>
-      </article>
-    `;
-  }).join("");
+        </article>
+      `;
+    }).join("");
 
-  if (container1) container1.innerHTML = html;
-  if (container2) container2.innerHTML = html;
+  const softwareSkills = skills.filter(s => s.category === "software");
+  const marketingSkills = skills.filter(s => s.category === "marketing");
+
+  if (softwareContainer) {
+    softwareContainer.innerHTML = render(softwareSkills);
+  }
+
+  if (marketingContainer) {
+    marketingContainer.innerHTML = render(marketingSkills);
+  }
 }
 
 function showProjects(projects) {
