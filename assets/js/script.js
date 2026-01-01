@@ -260,49 +260,37 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
 
-/* ===== TECHNOLOGY STACK CAROUSEL ===== */
-(function initTechCarousel() {
-  const rail = document.getElementById("techRail");
-  const prev = document.getElementById("techPrev");
-  const next = document.getElementById("techNext");
-  const fill = document.getElementById("techProgressFill");
-  const progress = document.querySelector(".tech-progress");
-
+/* ===== TECHNOLOGY STACK CAROUSEL (REUSABLE) ===== */
+function initTechCarousel({ railId, prevId, nextId, progressId }) {
+  const rail = document.getElementById(railId);
+  const prev = document.getElementById(prevId);
+  const next = document.getElementById(nextId);
+  const fill = document.getElementById(progressId);
+  const progress = fill?.parentElement;
 
   if (!rail || !prev || !next || !fill || !progress) return;
-
 
   const getStep = () => {
     const card = rail.querySelector(".tech-card");
     return card ? card.getBoundingClientRect().width * 1.15 : 320;
   };
 
-let lastPct = 0;
+  const update = () => {
+    const max = rail.scrollWidth - rail.clientWidth;
+    const x = rail.scrollLeft;
 
-const update = () => {
-  const max = rail.scrollWidth - rail.clientWidth;
-  const x = rail.scrollLeft;
+    prev.disabled = x <= 2;
+    next.disabled = x >= max - 2;
 
-  prev.disabled = x <= 2;
-  next.disabled = x >= max - 2;
-
-  const pct = max <= 0 ? 1 : x / max;
-
-  // True bidirectional sweep (left → right AND right → left)
-  fill.style.transform = `scaleX(${pct})`;
-
-  lastPct = pct;
-};
+    const pct = max <= 0 ? 1 : x / max;
+    fill.style.transform = `scaleX(${pct})`;
+  };
 
   let isDragging = false;
 
   const seekToPosition = (clientX) => {
     const rect = progress.getBoundingClientRect();
-    const ratio = Math.min(
-      1,
-      Math.max(0, (clientX - rect.left) / rect.width)
-    );
-
+    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
     const maxScroll = rail.scrollWidth - rail.clientWidth;
     rail.scrollLeft = maxScroll * ratio;
   };
@@ -335,4 +323,20 @@ const update = () => {
   window.addEventListener("resize", update);
 
   update();
-})();
+}
+// First carousel
+initTechCarousel({
+  railId: "techRail",
+  prevId: "techPrev",
+  nextId: "techNext",
+  progressId: "techProgressFill"
+});
+
+// Second carousel
+initTechCarousel({
+  railId: "techRail2",
+  prevId: "techPrev2",
+  nextId: "techNext2",
+  progressId: "techProgressFill2"
+});
+
