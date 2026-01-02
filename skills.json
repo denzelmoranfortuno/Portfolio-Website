@@ -45,8 +45,48 @@
     "category": "ai"
   },
   {
-    "name": "Azure DevOps",
-    "icon": "https://img.icons8.com/?size=100&id=lWL5zqQfa1pO&format=png&color=000000",
+    "name": "Atlassian",
+    "icon": "https://img.icons8.com/?size=100&id=RduYmqw5H7xm&format=png&color=000000",
+    "category": "product"
+  },
+  {
+    "name": "Monday.com",
+    "icon": "https://cdn.brandfetch.io/idHFUcTb1F/w/800/h/482/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B",
+    "category": "product"
+  },
+  {
+    "name": "Product Board",
+    "icon": "https://cdn.brandfetch.io/idbRq_hRW0/w/800/h/525/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B",
+    "category": "product"
+  },
+  {
+    "name": "Amplitude",
+    "icon": "https://cdn.brandfetch.io/idgF9FqCgW/w/800/h/167/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+    "category": "product"
+  },
+  {
+    "name": "ClickUp",
+    "icon": "https://cdn.brandfetch.io/idU6lzwMYA/w/800/h/961/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B",
+    "category": "product"
+  },
+  {
+    "name": "Asana",
+    "icon": "https://cdn.brandfetch.io/idxPi2Evsk/w/800/h/161/theme/light/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+    "category": "product"
+  },
+  {
+    "name": "Notion",
+    "icon": "https://cdn.brandfetch.io/idPYUoikV7/w/800/h/278/theme/light/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+    "category": "product"
+  },
+  {
+    "name": "Google Workspace",
+    "icon": "https://img.icons8.com/?size=100&id=17949&format=png&color=000000",
+    "category": "product"
+  },
+  {
+    "name": "Microsoft 365",
+    "icon": "https://cdn.brandfetch.io/idsWBrtc_i/w/800/h/800/theme/dark/idtAoLsWe7.png?c=1dxbfHSJFAPEGdCLU4o5B",
     "category": "product"
   },
   {
