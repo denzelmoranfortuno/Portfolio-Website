@@ -835,6 +835,10 @@ header .navbar ul li a:hover {
   text-align: left;
 }
 
+.education .box .content .details h5 + ul {
+  margin-bottom: 1.2rem;
+}
+
 /* education media queries starts*/
 @media screen and (max-width: 600px) {
   .education .box-container .box {
