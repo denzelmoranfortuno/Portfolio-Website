@@ -839,6 +839,12 @@ header .navbar ul li a:hover {
   margin-bottom: 1.2rem;
 }
 
+/* Add dash after section headers in Education details */
+.education .box .content .details h5::after {
+  content: " -";
+  font-weight: 600;
+}
+
 /* education media queries starts*/
 @media screen and (max-width: 600px) {
   .education .box-container .box {
